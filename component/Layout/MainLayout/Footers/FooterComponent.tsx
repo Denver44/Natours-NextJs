@@ -1,13 +1,13 @@
 import React from 'react';
-import { Copyright, CopyrightText } from './styles';
+import './footer.module.scss';
 
 export const FooterComponent = () => {
   return (
     <div>
       Footer
-      <Copyright>
-        <CopyrightText>All Rights Reserved © Denver 2021</CopyrightText>
-      </Copyright>
+      <section className="footer__section">
+        <p className="footer__text">All Rights Reserved © Denver 2021</p>
+      </section>
     </div>
   );
 };

@@ -4,15 +4,17 @@ export const required = (value: any) =>
 export const requiredLabel = (label: string) => (value: any) =>
   value || typeof value === 'number' ? undefined : `No ${label} was entered.`;
 
-export const maxLength = (max: any, type?) => (value: any) =>
-  value && value.length > max
-    ? `Must be ${max} ${type === 'number' ? 'digits' : 'characters'} or less`
-    : undefined;
+export const maxLength =
+  (max: any, type?: string | undefined) => (value: any) =>
+    value && value.length > max
+      ? `Must be ${max} ${type === 'number' ? 'digits' : 'characters'} or less`
+      : undefined;
 
-export const minLength = (min: any, type?) => (value: any) =>
-  value && value.length < min
-    ? `Must be ${min} ${type === 'number' ? 'digits' : 'characters'} or more`
-    : undefined;
+export const minLength =
+  (min: any, type?: string | undefined) => (value: any) =>
+    value && value.length < min
+      ? `Must be ${min} ${type === 'number' ? 'digits' : 'characters'} or more`
+      : undefined;
 
 export const number = (value: any) =>
   value && isNaN(Number(value)) ? `Must be a number` : undefined;

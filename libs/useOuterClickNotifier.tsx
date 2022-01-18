@@ -1,7 +1,10 @@
 import { useEffect } from 'react';
 
 // Hook
-export const useOuterClickNotifier = (onOuterClick, innerRef) => {
+export const useOuterClickNotifier = (
+  onOuterClick: (arg0: any) => any,
+  innerRef: { current: { contains: (arg0: any) => any } }
+) => {
   const handleClick = (e) => {
     innerRef.current && !innerRef.current.contains(e.target) && onOuterClick(e);
   };

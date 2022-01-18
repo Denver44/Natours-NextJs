@@ -1,7 +1,6 @@
 module.exports = {
   stories: [
-    '../stories/**/*.stories.mdx',
-    '../stories/**/*.stories.@(js|jsx|ts|tsx)',
+    '../component/**/*.stories.tsx'
   ],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
   framework: '@storybook/react',
@@ -10,3 +9,4 @@ module.exports = {
   },
   typescript: { reactDocgen: false },
 };
+
