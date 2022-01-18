@@ -12,12 +12,13 @@ import {
 import { actionTypes } from './actions.interfaces';
 import { getLoginUser, loginAPI, logoutAPI } from './api';
 import * as actionIs from './actions.interfaces';
+import { ResponseGenerator } from './data.interfaces';
 
 // Login
 export function* sagaDoLogin(action: actionIs.DoLogin) {
   yield put(loginStarted());
   try {
-    const data = yield loginAPI(action.data);
+    const data: ResponseGenerator = yield loginAPI(action.data);
     yield put(loginSuccess(data));
   } catch (e) {
     yield put(loginFail(e.message));
@@ -28,7 +29,7 @@ export function* sagaDoLogin(action: actionIs.DoLogin) {
 export function* sagaFetchLoginUser(action: actionIs.FetchLoginUser) {
   yield put(fetchLoginUserStarted());
   try {
-    const data = yield getLoginUser(action.data);
+    const data: ResponseGenerator = yield getLoginUser(action.data);
     yield put(fetchLoginUserSuccess(data));
     // TODO: for permission
     // if (data && data.user) {

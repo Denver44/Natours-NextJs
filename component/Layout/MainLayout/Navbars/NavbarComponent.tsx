@@ -1,6 +1,6 @@
 import React from 'react';
-import { Header } from './styles';
+import './navbar.module.scss';
 
 export const NavbarComponent = () => {
-  return <Header>Header</Header>;
+  return <nav className="navbar__header">Header</nav>;
 };

@@ -1,6 +1,6 @@
 import axios, { AxiosInstance } from 'axios';
 
-let axiosInstance = null;
+let axiosInstance: AxiosInstance | null = null;
 
 const deepClone = (obj: any) => {
   return JSON.parse(JSON.stringify(obj));
@@ -49,7 +49,7 @@ const fetch: (url: string, options?: FetchOptionsProps) => any = async (
   }
 };
 
-const randomNumber = (min, max) => {
+const randomNumber = (min: number, max: number) => {
   return Math.round(Math.random() * (max - min) + min);
 };
 

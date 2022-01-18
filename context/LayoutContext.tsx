@@ -16,7 +16,7 @@ const initialState: LayoutContextModel = {
 
 export const LayoutContext = createContext(initialState);
 
-export const LayoutContextProvider = ({ children }) => {
+export const LayoutContextProvider: React.FC<{}> = ({ children }) => {
   const dispatch = useDispatch();
   const [{ auth }, , removeCookie]: any = useCookies(['auth']);
   // const loginUser: LoginUserState = useSelector((state: RootState) => state.loginUser);

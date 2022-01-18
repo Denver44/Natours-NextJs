@@ -1,13 +1,9 @@
 import App, { AppProps } from 'next/app';
-import { AppContextType } from 'next/dist/next-server/lib/utils';
+// import { AppContextType } from 'next/dist/next-server/lib/utils';
 import Head from 'next/head';
 import React from 'react';
 import { LayoutContextProvider } from '../context/LayoutContext';
 import { wrapper } from '../redux/store';
-import CssBaseline from '@mui/material/CssBaseline';
-import { ThemeProvider } from '@mui/material/styles';
-import GlobalStyle from '../styles/globals/manifest';
-import theme from '../styles/theme';
 import 'tailwindcss/tailwind.css';
 
 // import Cookies from 'universal-cookie';
@@ -30,7 +26,7 @@ const MyApp = ({ Component, pageProps }: AppProps | any) => {
         />
         <meta name="description" content="Description" />
         <meta name="keywords" content="Keywords" />
-        <title>NextJs Boilerplate</title>
+        <title>Natours</title>
 
         <link rel="manifest" href="/manifest.json" />
         <link
@@ -48,20 +44,16 @@ const MyApp = ({ Component, pageProps }: AppProps | any) => {
         <link rel="apple-touch-icon" href="/apple-icon.png"></link>
         <meta name="theme-color" content="#317EFB" />
       </Head>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <LayoutContextProvider>
-          <GlobalStyle />
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </LayoutContextProvider>
-      </ThemeProvider>
+      <LayoutContextProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </LayoutContextProvider>
     </>
   );
 };
 
-MyApp.getInitialProps = async (appContext: AppContextType | any) => {
+MyApp.getInitialProps = async (appContext: any) => {
   let appProps: any = {};
 
   // const ctx = appContext.ctx;

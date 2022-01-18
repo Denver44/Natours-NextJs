@@ -26,5 +26,6 @@ Husky prevent from bad git commit, git push and more. If you still getting error
 ```bash
 git commit -m "message" --no-verify
 ```
-"# Natours-NextJs"  git init git add README.md git commit -m "first commit" git branch -M main git remote add origin git@github.com:Denver44/Natours-NextJs.git git push -u origin main
-"# Natours-NextJs" 
+
+"# Natours-NextJs" git init git add README.md git commit -m "first commit" git branch -M main git remote add origin git@github.com:Denver44/Natours-NextJs.git git push -u origin main
+"# Natours-NextJs"
