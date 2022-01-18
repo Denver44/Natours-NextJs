@@ -1,0 +1,9 @@
+.next
+node_modukles
+public
+.vscode
+stories
+.storybook
+package.json
+package-lock.json
+tsconfig.tsbuildinfo
