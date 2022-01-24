@@ -1,4 +1,27 @@
-@import '/assets/sass/main.scss';
+@import 'abstracts/function';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+@import 'base/animations';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
+
+@import 'pages/home';
+
+@import 'components/button';
+@import 'components/composition';
+@import 'components/feature';
+@import 'components/card';
+@import 'components/story';
+@import 'components/bg-video';
+@import 'components/form';
+@import 'components/popup';
+
+@import 'layout//navigation';
+@import 'layout/header';
+@import 'layout/grid';
+@import 'layout/footer';
 
 // @tailwind base;
 // @tailwind components;
