@@ -55,7 +55,7 @@ export function* sagaLogoutUser(action: actionIs.LogoutUser) {
       yield logoutAPI();
     }
   } catch (e) {
-    console.log('sagaLogoutUser', e);
+    // console.log('sagaLogoutUser', e);
   }
 }
 
