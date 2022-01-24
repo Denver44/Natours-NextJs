@@ -1,12 +1,9 @@
 import App, { AppProps } from 'next/app';
-// import { AppContextType } from 'next/dist/next-server/lib/utils';
+import '../styles/global.scss';
 import Head from 'next/head';
 import React from 'react';
 import { LayoutContextProvider } from '../context/LayoutContext';
 import { wrapper } from '../redux/store';
-// import 'tailwindcss/tailwind.css';
-import '../styles/global.scss';
-
 // import Cookies from 'universal-cookie';
 // import { API } from '../libs/helpers';
 

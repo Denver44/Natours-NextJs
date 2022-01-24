@@ -1,3 +1,7 @@
+// @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import 'abstracts/function';
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
@@ -22,7 +26,3 @@
 @import 'layout/header';
 @import 'layout/grid';
 @import 'layout/footer';
-
-// @tailwind base;
-// @tailwind components;
-// @tailwind utilities;
