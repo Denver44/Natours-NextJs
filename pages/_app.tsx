@@ -4,7 +4,8 @@ import Head from 'next/head';
 import React from 'react';
 import { LayoutContextProvider } from '../context/LayoutContext';
 import { wrapper } from '../redux/store';
-import 'tailwindcss/tailwind.css';
+// import 'tailwindcss/tailwind.css';
+import '../styles/global.scss';
 
 // import Cookies from 'universal-cookie';
 // import { API } from '../libs/helpers';
@@ -44,6 +45,7 @@ const MyApp = ({ Component, pageProps }: AppProps | any) => {
         <link rel="apple-touch-icon" href="/apple-icon.png"></link>
         <meta name="theme-color" content="#317EFB" />
       </Head>
+      <h1>Hello WORLD </h1>
       <LayoutContextProvider>
         <Layout>
           <Component {...pageProps} />
