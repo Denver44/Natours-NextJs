@@ -8,9 +8,13 @@
     border: none;
     font-family: inherit;
     border-bottom: 3px solid transparent;
-    width: 70%;
+    width: 90%;
     display: block;
     transition: all 0.3s;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
 
     &:focus {
       outline: none;
@@ -45,8 +49,13 @@
   }
 
   &__radio-group {
-    width: 30%;
+    width: 49%;
     display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
   }
   &__radio-input {
     visibility: hidden;
