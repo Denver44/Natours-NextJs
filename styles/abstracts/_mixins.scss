@@ -1,0 +1,62 @@
+@mixin clearfix {
+  &::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*
+
+MEDIA QUERIES MANAGER
+
+0     - 600px   : Phone
+600px - 900px   : Tablet portrait
+900   - 1200px  : Tablet landscape
+1200  - 1800    : is where our normal styles apply
+1800px +        : Big Desktop
+
+
+OLD WAY CREATING MIXING FUNCTION FOR EACH BREAKPOINTS
+@mixin respond-phone {
+  @media (max-width: 600px) {
+    @content; // @Content help us to import all the content for the particular media query
+  }
+}
+    
+1em = 16px
+Don't use px in media Queries
+
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
+
+// media only screen will be applied to media queries so if someone print out page then media queries don't apply
