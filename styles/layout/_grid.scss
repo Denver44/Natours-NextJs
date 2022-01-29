@@ -1,8 +1,16 @@
 .row {
-  max-width: $grid-with;
+  max-width: $grid-width; // Max-width occupy 100% view port width if declared grid-width is less than view port width.
   margin: 0 auto;
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include respond(tab-port) {
+      margin-bottom: $gutter-vertical-sm;
+    }
+  }
+  @include respond(tab-port) {
+    max-width: 50%;
+    padding: 0 3rem;
   }
 
   @include clearfix;
@@ -11,6 +19,14 @@
     float: left;
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+    }
+
+    @include respond(tab-port) {
+      width: 100% !important; // The width should overwritten
+    }
+    @include respond(tab-port) {
+      margin-right: 0;
+      margin-bottom: $gutter-vertical-sm;
     }
   }
   .col-1-of-2 {
